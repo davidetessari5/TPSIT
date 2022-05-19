@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Analisi Numerica</title>
+</head>
+
+<body onload="funzione()">
+    <script>
+        let contatore = 0;
+        let massimo1 = 0, massimo2 = 0;
+        let numero1, numMax2;
+
+        let somma = 0;
+
+        function funzione() {
+            for (let i = 1; i < 1000; i++) {
+                for (let j = 1; j < 1000 / 2; j++) {
+                    if (i % j == 0) {
+                        contatore++;
+                    }
+                }
+                if (massimo1 < contatore + 1) {
+                    massimo1 = contatore + 1;
+                    numero1 = i;
+                }
+                contatore = 0;
+            }
+            document.getElementById('uscita').innerHTML += 'divisori 1-1000: ' + numero1 + 'e num divisori: ' + massimo1;
+
+            for (let i = 1000; i < 2000; i++) {
+                for (let j = 1; j < 2000 / 2; j++) {
+                    if (i % j == 0) {
+                        contatore++;
+                    }
+                }
+                if (massimo2 < contatore + 1) {
+                    massimo2 = contatore + 1;
+                    numero2 = i;
+                }
+                contatore = 0;
+            }
+
+            document.getElementById('uscita').innerHTML += '          divisori 1000-2000: ' + numero1 + 'e num divisori: ' + massimo2;
+        }
+    </script>
+
+    <p id="uscita"></p>
+</body>
+</html>
