@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <h1>numeri primi da 1 a 100</h1>
+        <button onclick="generaprimi();">VAI</button>
+        <script>
+            function generaprimi(){
+                for(let i=1;i<=100;i++){
+                    if(isPrime(i)){
+                    document.write("<spam>"+i + "°</spam>");
+                    }else{
+                    document.write("<spam>"+i + " </spam>");
+                    }
+                }
+            }
+        function isPrime(n){
+        let primo=true;
+         for(let fattore=2;fattore<n/2&&primo;fattore++){
+         if(n%fattore==0){
+        primo=false;
+                    }
+                }return primo;
+            }
+        </script>
+    </body>
+</html>
