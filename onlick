@@ -1,0 +1,26 @@
+<input type="button" onclick="casuali()" value="Genera 50 numeri casuali">
+</p>
+<input type="button1" onclick="media()" value="Media">
+</p>
+<p id="cas"></p>
+<script>
+function cas() {
+  let vet[100];
+   if (n > 0 && n <= 100) {
+    str = "";
+    for (i = 0; i < 50; i++) {
+         vet[i] = Math.round(Math.random()*100 + 1);
+         }
+     
+     }
+     
+     for (i=0; i<50; i++){
+     document.getElementById("cas").innerHTML = vet[i] ;
+   } 
+     }
+   
+   } 
+   }
+}
+
+</script>
