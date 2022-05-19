@@ -1,0 +1,108 @@
+<html>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+font-family: Lato, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+img {
+  width: 15rem;
+  border:3px solid #ffff;
+  box-shadow:-3px 3px 0px 0 black;
+  display:block;
+}
+.card {
+  background: #64B5F6;
+  width: 27em;
+  min-height: 14rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0px 0px 0 #b0bec5;
+  position: relative;
+  box-shadow: #BBDEFB 5px 10px 0 0;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.card_image {
+  margin-left: -5rem;
+  
+}
+.card_details {
+  margin: 1rem;
+  
+}
+
+h1{
+  font-size:2.2rem;
+  line-height:2rem;
+  letter-spacing:1px;
+  color:#ffff;
+  text-align:center;
+  font-weight:bold;
+  font-family: Merriweather, serif;  
+}
+p{
+  font-size:1rem;
+  text-align:center;
+  font-weight:700;
+  letter-spacing:1px;
+  line-height:3rem;
+  color:#F5F5F5;
+}
+.social_links{
+  font-size:1.5rem;
+  padding-left:1rem;
+}
+.social_links a{
+  text-decoration:none;
+  margin-left:1rem;
+  color:whitesmoke;
+}
+</style>
+<div class="container">
+  <div class="card row">
+    <div class="card_image">
+      <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.18169-9/25157956_1382681635192214_2909389515688426414_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=973b4a&_nc_ohc=PY0RJ_KZYfYAX_Yx0D_&_nc_ht=scontent-mxp1-1.xx&oh=ac51aaafacefe524b73653fb332ee815&oe=6197580D" alt="image">
+    </div>
+    <div class="card_details">
+      <h1>Davide Terssari</h1>
+      <p>
+       Nichelino,Torino<br>
+       Football player
+       <br> Student Of Maxwell<br>
+        02/05/2005<br>Nazionalità italiana</br>Mi piace ascoltare la musica e uscire con gli amici 
+      </p>
+      <div class="social_links">
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+         <a href="#">
+           <i class="fab fa-instagram"></i>
+         </a>
+        <a href="#">
+           <i class="fab fa-github"></i>
+          
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
