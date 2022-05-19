@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    let arrayBello = [], num = 100,indice;
+    function riempiArray() {
+        for (let i = 0; i < num; i++) {
+            arrayBello[i] = parseInt(Math.random() * 1000);
+            document.getElementById("out").innerHTML += arrayBello[i] + " ";
+        }
+    }
+    function max() {
+        let massimo = -1, indice ;
+        for (let i = 0; i < 50; i++) {
+            if (arrayBello[i] > massimo) {
+                massimo = arrayBello[i];
+                indice = i;
+                indice++;
+            }
+        }
+        document.getElementById("outMassimo").innerHTML += massimo + " " + indice;
+    }
+    </script>
+</head>
+<body>
+    <button onclick="riempiArray()">
+        Carica array
+    </button>
+    <button onclick="max()">
+        massimo
+    </button>
+    <p id="out">numero: </p>
+    <p id="outMassimo">Numero massimo e posizione: </p>
+</body>
+</html>
