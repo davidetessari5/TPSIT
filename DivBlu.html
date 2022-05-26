@@ -1,0 +1,81 @@
+<SCRIPT Language='JavaScript'>
+
+    function inizia() {
+        var pos = -1;
+        var verso = 1;
+        var colR = [10];
+        var colG = [10];
+        var colB = [10];
+        for (var i = 0; i < 10; i++) {
+            colR[i] = 255;
+            colG[i] = 255;
+            colB[i] = 255;
+        }
+        var a = document.getElementsByName('A');
+
+
+        for (i = 0; i < a.length; i++) {
+            a[i].style.left = (i * 60) + 10;
+        }
+
+        setInterval(function () {
+
+
+            pos = pos + verso;
+
+            if (pos >= a.length - 1 && verso == 1)
+                verso = -verso;
+            else
+                if (pos <= 0 && verso == -1)
+                    verso = -verso;
+            let random = parseInt(Math.random() * a.length);
+            if (random == 2) {
+                divRand = parseInt(Math.random() * 10);
+                a[divRand].style.backgroundColor = 'rgb(' + colR[divRand] + ',' + colG[divRand] + ',' + colB[divRand] + ')';
+                colR[divRand] -= 5;
+                colG[divRand] -= 5;
+                if (colR[divRand] <= 0) {
+                    a[divRand].style.backgroundColor = 'white';
+                    a[divRand].style.border = 'solid white';
+                }
+            }
+        }, 1);
+
+
+    }
+
+</SCRIPT>
+
+
+<HTML>
+
+<HEAD>
+    <TITLE>Svanimento</TITLE>
+</HEAD>
+
+<style type="text/css">
+    .miediv {
+
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-width: 1px;
+        border: solid black;
+        top: 20px;
+    }
+</style>
+
+<BODY onLoad="inizia()">
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+    <DIV name='A' class='miediv'></DIV>
+</BODY>
+
+</HTML>
