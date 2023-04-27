@@ -1,0 +1,8 @@
+<div id="postIt">
+  <div class=topBar></div>
+  <div class=form>
+    <div contenteditable class=textAria>
+      Hello, <b>Edit Me First</b> Then Drag & Drop me.
+    </div>
+  </div>
+</div>
